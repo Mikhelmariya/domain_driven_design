@@ -9,8 +9,7 @@ import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:domain_driven_design/domain/core/value_objects.dart';
 
-
-class EmailAddress extends ValueObject<String>{
+class EmailAddress extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
 
   factory EmailAddress(String input) {
@@ -21,10 +20,9 @@ class EmailAddress extends ValueObject<String>{
   }
 
   const EmailAddress._(this.value);
-
 }
 
-class Password extends ValueObject<String>{
+class Password extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
 
   factory Password(String input) {
@@ -35,7 +33,6 @@ class Password extends ValueObject<String>{
   }
 
   const Password._(this.value);
-
 }
 
 
