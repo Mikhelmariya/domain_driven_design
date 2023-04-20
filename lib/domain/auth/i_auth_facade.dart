@@ -6,7 +6,7 @@ import 'package:flutter/foundation.dart';
 
 abstract class IAuthFacade{
 
-Future<Either<AuthFailure,Unit>> regidterWithEmailAndPassword({
+Future<Either<AuthFailure,Unit>> registerWithEmailAndPassword({
   required EmailAddress emailAddress,
   required Password password,
 });

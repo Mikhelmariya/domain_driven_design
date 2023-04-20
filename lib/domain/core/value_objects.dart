@@ -8,13 +8,12 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-
 @immutable
 abstract class ValueObject<T> {
   const ValueObject();
-   Either<ValueFailure<T>, T>get  value;
+  Either<ValueFailure<T>, T> get value;
 
- 
+  bool isValid() => value.isRight();
 
   @override
   String toString() => 'Value($value)';
